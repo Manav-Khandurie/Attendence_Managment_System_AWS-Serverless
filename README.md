@@ -1,0 +1,59 @@
+<div align='center'>
+
+
+![Group 26](https://github.com/prathamkandari/FASAL-FUSION/assets/107267866/73a51274-045a-483c-80b3-b9b1f998b166)
+
+
+</div>
+
+### About the Project
+> A Full stack application which is a cloud native application built using AWS services like AWS S3 bucket ,AWS API gateway ,AWS Lambda and AWS DynamoDb. This application follows the AWS SERVERLESS ARCHITECTURE.
+
+### Tech Stack
+
+![Static Badge](https://img.shields.io/badge/HTML-101010?logo=html5&logoColor=%23E34F26) ![Static Badge](https://img.shields.io/badge/JavaScript-101010?logo=javascript&logoColor=%23F7DF1E) ![Static Badge](https://img.shields.io/badge/CSS-202020?logo=css3&logoColor=%231572B6) ![Static Badge](https://img.shields.io/badge/AWS-202020?logo=aws&logoColor=%231572B6)
+
+
+### Cloud Architecture
+![Group 26](https://github.com/Manav-Khandurie/Attendence_Managment_System_AWS-Serverless/assets/123000337/db8be6a5-dd84-421c-a99f-3fa5b0917008)
+
+### Contributing
+
+1. Fork the Project
+2. Clone your forked repository
+
+```sh
+ git clone https://github.com/<your_github_username>/FASAL-FUSION.git
+```
+3. Now go ahead and create a new branch and move to the branch
+   ```sh
+   git checkout -b fix-issue-<ISSUE-NUMBER>
+   ```
+4. After you have added your changes, follow the following command chain
+   * Check the changed files
+    ```sh
+     git status -s
+     ```
+
+   * Add all the files to the staging area
+      ```sh
+     git add .
+     ```
+     or
+     ```sh
+     git add <file_name1> <file_name2>
+     ```
+   * Commit your changes
+    ```sh
+     git commit -m "<EXPLAIN-YOUR_CHANGES>"
+     ```
+5. Push your changes
+   ```sh
+   git push origin fix-issue-<ISSUE-NUMBER>
+   ```
+6. Open a Pull Request 
+>
+> * Wait for the PR to be reviewed and merged.
+>
+> * Happy Coding!
+<br />
