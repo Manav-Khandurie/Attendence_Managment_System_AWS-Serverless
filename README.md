@@ -12,10 +12,10 @@
 ### Tech Stack
 
 ![Static Badge](https://img.shields.io/badge/HTML-101010?logo=html5&logoColor=%23E34F26) ![Static Badge](https://img.shields.io/badge/JavaScript-101010?logo=javascript&logoColor=%23F7DF1E) ![Static Badge](https://img.shields.io/badge/CSS-202020?logo=css3&logoColor=%231572B6) ![Static Badge](https://img.shields.io/badge/AWS-101010?logo=amazonaws) ![Static Badge](https://img.shields.io/badge/ReactJS-101010?logo=react&logoColor=%2361DAFB) ![Static Badge](https://img.shields.io/badge/Python-101010?logo=python)
-![Static Badge](https://img.shields.io/badge/DynamoDB-101010?logo=amazondynamodb) ![Static Badge](https://img.shields.io/badge/AWSAPIGateWay-101010?logo=amazonapigateway) ![Static Badge](https://img.shields.io/badge/AWSS3-101010?logo=amazons3) ![Static Badge](https://img.shields.io/badge/AWSLambda-101010?logo=awslambda)![Static Badge](https://img.shields.io/badge/AWS_IAM-101010?logo=amazoniam)
+![Static Badge](https://img.shields.io/badge/DynamoDB-101010?logo=amazondynamodb) ![Static Badge](https://img.shields.io/badge/AWSAPIGateWay-101010?logo=amazonapigateway) ![Static Badge](https://img.shields.io/badge/AWSS3-101010?logo=amazons3) ![Static Badge](https://img.shields.io/badge/AWSLambda-101010?logo=awslambda)![Static Badge](https://img.shields.io/badge/AWS_IAM-101010?logo=amazoniam)![Static Badge](https://img.shields.io/badge/PostMan-101010?logo=postman)
 
 ### Cloud Architecture
-![Group 26](https://github.com/Manav-Khandurie/Attendence_Managment_System_AWS-Serverless/assets/123000337/db8be6a5-dd84-421c-a99f-3fa5b0917008)
+![Group 26](https://github.com/Manav-Khandurie/Attendence_Managment_System_AWS-Serverless/assets/123000337/b073436b-4f83-47f5-b2c7-5b5aa392f884)
 
 ### Contributing
 
