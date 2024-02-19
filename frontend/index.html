@@ -7,6 +7,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
         }
         form {
             margin-bottom: 20px;
@@ -14,32 +32,64 @@
         label {
             font-weight: bold;
         }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            white-space: pre-wrap;
+        }
     </style>
 </head>
 <body>
-    <h1>Attendance Tracker</h1>
-    <form id="fetchForm">
-        <input type="hidden" name="operation" value="fetch">
-        <button type="submit">Fetch Attendance</button>
-    </form>
-    <form id="insertForm">
-        <input type="hidden" name="operation" value="insert">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="attendance">Attendance:</label>
-        <input type="number" id="attendance" name="attendance" required><br>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required><br>
-        <button type="submit">Insert Attendance</button>
-    </form>
+    <div class="container">
+        <h1>Attendance Tracker</h1>
+        <form id="fetchForm">
+            <input type="hidden" name="operation" value="fetch">
+            <button type="submit">Fetch Attendance</button>
+        </form>
+        <form id="insertForm">
+            <input type="hidden" name="operation" value="insert">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="attendance">Attendance:</label>
+            <input type="number" id="attendance" name="attendance" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Insert Attendance</button>
+        </form>
+        <form id="deleteForm">
+            <input type="hidden" name="operation" value="delete">
+            <label for="uid">UID:</label>
+            <input type="text" id="uid" name="uid" required>
+            <button type="submit">Delete Record</button>
+        </form>
 
-    <div id="result"></div>
+        <div id="result"></div>
+    </div>
 
     <script>
         const fetchForm = document.getElementById('fetchForm');
         const insertForm = document.getElementById('insertForm');
+        const deleteForm = document.getElementById('deleteForm');
         const resultDiv = document.getElementById('result');
 
         fetchForm.addEventListener('submit', async (e) => {
@@ -79,6 +129,26 @@
                 resultDiv.innerHTML = JSON.stringify(data, null, 2);
             } catch (error) {
                 console.error('Error inserting attendance:', error);
+            }
+        });
+
+        deleteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(deleteForm);
+            const requestData = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('https://h7wdgah8x6.execute-api.us-east-1.amazonaws.com/prod', {
+                    method: 'POST',
+                    body: JSON.stringify(requestData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                resultDiv.innerHTML = JSON.stringify(data, null, 2);
+            } catch (error) {
+                console.error('Error deleting record:', error);
             }
         });
     </script>
