@@ -119,3 +119,5 @@ def fetch_records(event):
             'statusCode': 500,
             'body': {'error': str(e)}
         }
+
+# Note Make sure to set up all the ENV variables as well as the lambda function before testing
