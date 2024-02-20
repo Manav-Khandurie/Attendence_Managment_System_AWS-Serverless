@@ -23,7 +23,7 @@
 2. Clone your forked repository
 
 ```sh
- git clone https://github.com/<your_github_username>/FASAL-FUSION.git
+ git clone https://github.com/<your_github_username>/Attendence_Managment_System_AWS-Serverless.git
 ```
 3. Now go ahead and create a new branch and move to the branch
    ```sh

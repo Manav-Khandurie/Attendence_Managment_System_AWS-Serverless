@@ -91,14 +91,16 @@
         const insertForm = document.getElementById('insertForm');
         const deleteForm = document.getElementById('deleteForm');
         const resultDiv = document.getElementById('result');
-
+        const URL="https://hgx12i4u7d.execute-api.us-east-1.amazonaws.com/apiprod";
+        //Put your API Gateway Invoke URL here
+        
         fetchForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const formData = new FormData(fetchForm);
             const requestData = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('https://h7wdgah8x6.execute-api.us-east-1.amazonaws.com/prod', {
+                const response = await fetch(URL, {
                     method: 'POST',
                     body: JSON.stringify(requestData),
                     headers: {
@@ -118,7 +120,7 @@
             const requestData = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('https://h7wdgah8x6.execute-api.us-east-1.amazonaws.com/prod', {
+                const response = await fetch(URL, {
                     method: 'POST',
                     body: JSON.stringify(requestData),
                     headers: {
@@ -138,7 +140,7 @@
             const requestData = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('https://h7wdgah8x6.execute-api.us-east-1.amazonaws.com/prod', {
+                const response = await fetch(URL, {
                     method: 'POST',
                     body: JSON.stringify(requestData),
                     headers: {
